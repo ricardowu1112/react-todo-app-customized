@@ -2,9 +2,10 @@
 // src/App.js
 import React, {useState,useEffect} from "react";
 import './App.scss';
-import { MySwitch } from './components/MySwitch';
+import './components/MySwitch.css'
 import { EditableText } from "./components/EditableText";
-
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { DndProvider } from 'react-dnd';
 function App() {
   // state for the first swtich
   const [valueOne, setValueOne] = useState(false);
@@ -20,6 +21,7 @@ function App() {
     e.preventDefault();
 
     let todo = document.getElementById('todoAdd').value
+
     const newTodo = {
       id: new Date().getTime(),
       text: todo.trim(),
@@ -70,22 +72,26 @@ function App() {
           <div className="todo" key={todo.id}>
                   <div className='kindacard'>
 
-                      <div className='box-container' id="list-box-container" style={{ width:"68%", height:"auto", resize:"vertical",  wordWrap: "break-word",  "letter-spacing":"1px"}}>
-                        <EditableText value={todo.text}/>
+                        <div className='box-container' id="list-box-container" style={{ width:"68%", height:"auto", resize:"vertical",  wordWrap: "break-word",  "letter-spacing":"1px"}}>
+                          <EditableText value={todo.text}/>
                         {/* <span className="todo-text" style={{"font-size":"13px","font-family":"Georgia"}}>{todo.text}</span> */}
-                      </div>
-                      <div id="button-container">
-                        <MySwitch value={valueOne} onChange={handleChangeOne} rounded={true} />
-                      </div>
+                        </div>
+
+                        <div id="button-container"> 
+                          <label className='my-switch'>
+                            <input type='checkbox' id="completed" checked={todo.completed} onChange={() => toggleComplete(todo.id)}/> 
+                            <span className="slider rounded" />
+                          </label>
+                        </div>
                       {/* <div class= "vertical" style={{"border-left": "1px solid black", height:"40px"}}></div> */}
                       {/* <div style={{"margin-left":-10, "margin-right":-15}}>
                         <button style={{border:"none", outline:"none", backgroundColor: "transparent", color:"red", fontSize:"20px", cursor:"pointer"}} onClick={() => deleteTodo(todo.id)}>X</button>
                       </div> */}
                       
                       {/* <button aria-label='delete item' onClick='alert("You deleted the item!")' type='button'>X</button> */}
-                  </div>
+                    </div>
               {/* <div className="todo-text">{todo.text}</div> */}
-          </div>)}
+            </div>)}
 
       {/* <div className='kindacard'>
         <div className='box-container'>
