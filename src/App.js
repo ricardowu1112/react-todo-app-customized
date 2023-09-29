@@ -6,6 +6,8 @@ import './components/MySwitch.css'
 import { EditableText } from "./components/EditableText";
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { DndProvider } from 'react-dnd';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 // import {IonIcon} from '@iconic/react'
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const [todoEditing, setTodoEditing] = useState(null);
+
+  const MySwal = withReactContent(Swal)
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -32,8 +36,12 @@ function App() {
     if (newTodo.text.length > 0 ) {
         setTodos([...todos].concat(newTodo));
     } else {
-
-        alert("Enter Valid Task");
+        MySwal.fire({
+          title: <strong>Enter Valid Task!</strong>,
+          html: <i>Don't input empty string</i>,
+          icon: 'failed'
+        })
+        // alert("Enter Valid Task");
     }
     document.getElementById('todoAdd').value = ""
   }

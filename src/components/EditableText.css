@@ -9,6 +9,7 @@ blockquote p {
   padding: 10px;
   color: #fff;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
 }
 
 [contenteditable='true'] {
