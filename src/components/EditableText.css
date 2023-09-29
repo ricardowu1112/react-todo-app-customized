@@ -1,0 +1,13 @@
+blockquote {
+  background: #cecece;
+  border-radius: 5px;
+  margin: 0px 0;
+}
+
+blockquote p {
+  padding: 10px;
+}
+
+[contenteditable='true'] {
+  caret-color: red;
+}

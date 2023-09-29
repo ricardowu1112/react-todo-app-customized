@@ -1,0 +1,132 @@
+/* KindaCode.com */
+/* src/App.css */
+@import url('https://rsms.me/inter/inter.css');
+:root {
+  --color-light: white;
+  --color-dark: #212121;
+  --color-signal: #fab700;
+  
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: var(--color-signal);
+  
+  --size-bezel: .5rem;
+  --size-radius: 4px;
+  
+  line-height: 1.4;
+  
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: calc(.6rem + .4vw);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-weight: 300;
+  padding: 0 calc(var(--size-bezel) * 3);
+}
+
+h1 {
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+/* This part is for kindacode
+https://www.kindacode.com/article/react-create-a-reusable-switch-toggle-component/
+*/
+
+.container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.kindacard {
+  margin: 30px 0;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.box {
+  margin: 30px 0;
+  width: 300px;
+  height: 100px;
+  background: orange;
+}
+
+.secret {
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+  color: blue;
+}
+
+/* This part is for kindacode
+https://codepen.io/meodai/pen/rNedxBa
+*/
+
+// .input {
+//   position: relative;
+  
+//   &__label {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+//     margin: calc(var(--size-bezel) * 0.75 + 15px) calc(var(--size-bezel) * .5);
+//     background: pink;
+//     white-space: nowrap;
+//     transform: translate(0, 0);
+//     transform-origin: 0 0;
+//     background: var(--color-background);
+//     transition: transform 120ms ease-in;
+//     font-weight: bold;
+//     line-height: 1.2;
+//     font-family:Georgia, 'Times New Roman', Times, serif;
+//   }
+//   &__field {
+//     box-sizing: border-box;
+//     display: block;
+//     width: 100%;
+//     border: 3px solid currentColor;
+//     padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+//     color: currentColor;
+//     background: transparent;
+//     border-radius: var(--size-radius);
+    
+//     &:focus,
+//     &:not(:placeholder-shown) {
+//       & + .input__label {
+//         transform: translate(.25rem, -65%) scale(.8);
+//         color: var(--color-accent);
+//       }
+//     }
+//   }
+// }
+
+
+#todo-list {
+  width: 500px;
+  margin: 60px auto;
+}
+
+form .todo {
+  border: 1px solid rgb(15, 26, 61);
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  width: 400px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+form input {
+  padding: 4px 8px;
+  flex-grow: 1;
+  margin-right: 16px;
+}
