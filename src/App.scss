@@ -2,8 +2,8 @@
 /* src/App.css */
 @import url('https://rsms.me/inter/inter.css');
 :root {
-  --color-light: white;
-  --color-dark: #212121;
+  --color-light: #352f5b;
+  --color-dark: white;
   --color-signal: #fab700;
   
   --color-background: var(--color-light);
@@ -23,10 +23,28 @@
   padding: 0 calc(var(--size-bezel) * 3);
 }
 
+textarea:focus{
+  color: #fff;
+  border:none;
+}
+
 h1 {
   text-align: center;
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhfwyNxkPY6_-HAap2mZkK8mkiBMy7CqvSFMwglgEgBTToRwKA64vjK-LW9jLUiUTU1wM&usqp=CAU);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0px;
+  font-size: 60px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Steelfish Rg', 'helvetica neue',
+            helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* This part is for kindacode
@@ -47,6 +65,8 @@ https://www.kindacode.com/article/react-create-a-reusable-switch-toggle-componen
   background: rgba(0, 0, 0, 0.04);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  background-color: #423a6f;
+  color: #F8F9FA;
 }
 
 .box {
@@ -62,6 +82,32 @@ https://www.kindacode.com/article/react-create-a-reusable-switch-toggle-componen
   font-style: italic;
   color: blue;
 }
+
+#button-add {
+    background-image: radial-gradient(farthest-side at bottom left, rgba(255, 0, 255, .5), transparent),
+        radial-gradient(farthest-corner at bottom right, rgba(255, 255, 50, .5), transparent);
+}
+
+#button-add:active {
+  box-shadow: inset 0 0 0 999px rgba(0, 0, 0, .1);
+}
+
+
+#button-add:hover {
+  background-color:#002ead;
+  transition: 0.3s;
+}
+
+#button-add:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #5a01a7;
+    transition: 0.3s;
+}
+
+// #button-add:active {
+//   background-color: #ffbf00;
+// }
 
 /* This part is for kindacode
 https://codepen.io/meodai/pen/rNedxBa

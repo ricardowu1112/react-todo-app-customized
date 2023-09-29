@@ -6,6 +6,8 @@ import './components/MySwitch.css'
 import { EditableText } from "./components/EditableText";
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { DndProvider } from 'react-dnd';
+// import {IonIcon} from '@iconic/react'
+
 function App() {
   // state for the first swtich
   const [valueOne, setValueOne] = useState(false);
@@ -65,8 +67,8 @@ function App() {
     <div className='container'>
       <h1>Todo List</h1>
       <form onSubmit={handleSubmit}>
-            <textarea style = {{"font-family":"Georgia","margin-right":"10px","padding-left":"3.6%","padding-right":"3.6%",width:"82%" ,height:"auto",resize:"none","border-radius":"4px", "font-size":"13px", "letter-spacing":"1px"}} class="input__field" id = 'todoAdd' type="text" placeholder=" " rows = "2" cols = "4" > </textarea>
-            <button style={{cursor:"pointer"}} type="submit">Add Todo</button>
+            <textarea style = {{color:"#fff",border:"none","font-family":"Georgia","margin-right":"10px","padding-left":"3.6%","padding-right":"3.6%",width:"82%" ,height:"auto",resize:"none","border-radius":"4px", "font-size":"13px", "letter-spacing":"1px", backgroundColor:"rgba(0, 0, 0, .2)"}} class="input__field" id = 'todoAdd' type="text" placeholder=" " rows = "3" cols = "4" > </textarea>
+            <button id="button-add" style={{ "font-family": "Ssans-serif",cursor:"pointer", "background-color":"#2a80eb", color: "#fff", border:"none","border-radius":"10px" }} type="submit">Add Task</button>
       </form>
       {todos.map((todo) => 
           <div className="todo" key={todo.id}>

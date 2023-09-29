@@ -2,10 +2,13 @@ blockquote {
   background: #cecece;
   border-radius: 5px;
   margin: 0px 0;
+  background-color: rgba(0, 0, 0, .2);
 }
 
 blockquote p {
   padding: 10px;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 [contenteditable='true'] {
